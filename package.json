@@ -7,7 +7,9 @@
     "pretest": "standard",
     "test": "nyc mocha",
     "version": "standard-version",
-    "coverage": "nyc report --reporter=text-lcov | coveralls"
+    "coverage": "nyc report --reporter=text-lcov | coveralls",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -39,6 +41,8 @@
     "redis": "^2.5.3",
     "request": "^2.70.0",
     "restify": "^4.0.4",
-    "yargs": "^4.6.0"
-  }
+    "yargs": "^4.6.0",
+    "snyk": "^1.189.0"
+  },
+  "snyk": true
 }
